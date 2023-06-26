@@ -1,0 +1,20 @@
+#check function
+def check_odd_even(number):
+    if isinstance(number, float):
+        # Convert decimal to integer if necessary
+        number = int(number)
+
+    if number % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"
+
+#input
+input_number = input("Enter a decimal or integer number: ")
+try:
+    number = float(input_number)
+    result = check_odd_even(number)
+    print(f"The number {number} is {result}.")
+except ValueError:
+    print("Please enter a valid decimal or integer number.")
+    
